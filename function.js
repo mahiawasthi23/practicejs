@@ -90,4 +90,17 @@
 // console.log(c);
 
 
+// let array = 53;
+// let sum =0;
+// while(array>0){
+//     let num = array%10;
+//     sum = sum + num;
+//     array = parseInt(array/10);
+// }
+// console.log(sum);
+
+
+
+
+
 
