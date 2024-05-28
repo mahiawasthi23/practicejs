@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Handling</title>
+</head>
+<body>
+  <form id="form">
+    <input type="text" id="name" placeholder="Name">
+    <input type="email" id="email" placeholder="Email">
+    <input type="text" id="phone" placeholder="Phone Number">
+    <button type="submit">Add</button>
+  </form>
+
+  <table id="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+    </tbody>
+  </table>
+
+  <script>
+    const formTag = document.getElementById("form");
+    const tableTag = document.querySelector("#table tbody");
+    const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
+    const phoneInput = document.getElementById("phone");
+
+    function Add(event) {
+      event.preventDefault();
+
+      const name = nameInput.value.trim();
+      const email = emailInput.value.trim();
+      const phone = phoneInput.value.trim();
+
+      if (!name || !email || !phone) {
+        alert("All fields are required.");
+        return;
+      }
+
+    
+      const rows = tableTag.querySelectorAll("tr");
+      for (const row of rows) {
+        const existingEmail = row.cells[1].innerText;
+        const existingPhone = row.cells[2].innerText;
+        if (existingEmail === email || existingPhone === phone) {
+          alert("Email or phone number already exists.");
+          return;
+        }
+      }
+
+      const newRow = document.createElement("tr");
+      newRow.innerHTML = `
+        <td>${name}</td>
+        <td>${email}</td>
+        <td>${phone}</td>
+        <td><button class="removeBtn">Remove</button></td>
+      `;
+      tableTag.appendChild(newRow);
+
+      nameInput.value = "";
+      emailInput.value = "";
+      phoneInput.value = "";
+    }
+
+    function Remove(event) {
+      if (event.target.classList.contains("removeBtn")) {
+        event.target.closest("tr").remove();
+      }
+    }
+
+    formTag.addEventListener("submit", Add);
+    tableTag.addEventListener("click", Remove);
+  </script>
+</body>
+</html>
