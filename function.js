@@ -100,7 +100,34 @@
 // console.log(sum);
 
 
+// let input = 'below';
+// let input1 = 'elbow';
+// let f = 0;
+// for(let i = 0; i < input.length; i++){
+//     if(input.length !== input1.length){
+//         f=1;
+//         break;
+//     }else if(input1.includes(input[i])){
+//         continue;
+//     }else{
+//         f=1;
+//         break;
+//     }
+// }
+// if(f === 1){
+//     console.log('false');
+// }else{
+//     console.log('true');
+// }
 
 
-
-
+let array1 = ["javascript", "react", "node"];
+let result = "";
+for(let i = 0; i < array1.length; i++) {
+    if(array1[i] === "javascript") {
+        result = result + " true";
+    } else {
+        result = result + " false";
+    }
+}
+console.log(result);
