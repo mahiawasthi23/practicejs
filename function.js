@@ -121,13 +121,102 @@
 // }
 
 
-let array1 = ["javascript", "react", "node"];
-let result = "";
-for(let i = 0; i < array1.length; i++) {
-    if(array1[i] === "javascript") {
-        result = result + " true";
-    } else {
-        result = result + " false";
+// let array1 = ["javascript", "react", "node"];
+// let result = "";
+// for(let i = 0; i < array1.length; i++) {
+//     if(array1[i] === "javascript") {
+//         result = result + " true";
+//     } else {
+//         result = result + " false";
+//     }
+// }
+// console.log(result);
+
+
+
+
+// function show(num) {
+//     if (num <= 10) {
+//         console.log("Hi ", num);
+//         num++;
+//         show(num); 
+//     }
+// }
+// show(1); 
+
+
+
+// function printTable(number, multiplier) {
+//     if (multiplier > 10) {
+//         return;
+//     }
+//     console.log(`${number * multiplier}`);
+//     printTable(number, multiplier + 1);
+// }
+
+// function printTables() {
+//     for (let i = 2; i <= 5; i++) {
+//         printTable(i, 1);
+//         console.log('\n'); 
+//     }
+// }
+// printTables();
+
+
+
+// function factorial(n) {
+//     if (n === 0) {
+//         return 1;
+//     }
+//     else {
+//         return n * factorial(n - 1);
+//     }
+// }
+
+// console.log(factorial(5)); 
+
+
+
+
+// function printTables(number, multiplier) {
+//     if (multiplier > 10) {
+//         return;
+//     }
+
+//     let row = '';
+//     for (let i = 2; i <= number; i++) {
+//         row += `${i * multiplier}\t`;
+//     }
+//     console.log(row);
+
+//     printTables(number, multiplier + 1);
+// }
+
+// printTables(5,1);
+
+
+
+let treet = new Promise(function(resoleve,reject){
+    let party = true;
+    let gift = true;
+if(gift){
+    if(party){
+        resoleve ("Today have a party");
     }
-}
-console.log(result);
+    else{
+        reject ("No have a party")
+    }
+}else {
+    reject("no party");
+} 
+
+});
+
+treet.then((result)=>{
+    console.log(result);
+}).catch((error)=>{
+    console.log(error);
+})
+
+
+
