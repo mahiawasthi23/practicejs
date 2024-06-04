@@ -19,3 +19,52 @@
 //     }
 // }
 // console.log(sum);
+
+
+
+
+// function hierOrderFunction(num , callback){
+//     callback(num);
+// }
+
+
+// function callbackFunction(num){
+//     console.log(num);
+// }
+// hierOrderFunction(5, callbackFunction);
+
+
+// hierOrderFunction(10, function(num){
+//     console.log(num);
+// });
+
+
+// hierOrderFunction(4, function(num){
+//     console.log(num * num);
+// });
+
+
+
+
+// hierOrderFunction(3, 7, function(num1, num2){
+//     console.log(num1 + num2);
+// });
+
+
+
+// let arr = [5, 5, 2, 11, 11, 2];
+// let count = 0;
+// let maxcount = 0
+// let element = 0;
+// for (let i=0; i<arr.length-1; i++){
+//     if(arr[i] == arr[i+1]){
+//         count++;
+//     }
+//     if(count>maxcount){
+//         let f = maxcount;
+//         maxcount = count;
+//         count = " ";
+//         element = arr[i];
+//     }
+// }
+// console.log(element);
