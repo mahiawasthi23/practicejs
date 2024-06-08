@@ -9,15 +9,36 @@
 // let arr = [1,2,3];
 // console.log(arr.unshift(5));
 
+// let arr = [2,3,4];
+// arr.unshift(1);
+// console.log(arr);
+// console.log(arr.length);
+
 
 // const fruits = ["Banana", "Orange", "Apple", "Mango"];
 // let fruit = fruits.toString();
 // console.log(fruit);
 
 
+
 // const fruits = ["Banana", "Orange", "Apple", "Mango"];
 // let fruit = fruits.at(2);
 // console.log(fruit);
+
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"]
+// let fruit = fruits.join("*");
+// console.log(fruit);
+
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// fruits.pop();
+// console.log(fruits);
+
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// let length = fruits.push("Kiwi");
+// console.log(fruits);
 
 
 
@@ -55,4 +76,9 @@
 // greet();
 // ask();
 // farewell();
+
+// const val = ' ';
+// const v = typeof(val);
+// console.log(v);
+
 
