@@ -16,19 +16,16 @@
 
 
 // const fruits = ["Banana", "Orange", "Apple", "Mango"];
-// let fruit = fruits.toString();
-// console.log(fruit);
+// console.log(fruits.toString());
 
 
 
 // const fruits = ["Banana", "Orange", "Apple", "Mango"];
-// let fruit = fruits.at(2);
-// console.log(fruit);
+// console.log(fruits.at(2));
 
 
 // const fruits = ["Banana", "Orange", "Apple", "Mango"]
-// let fruit = fruits.join("*");
-// console.log(fruit);
+// console.log(fruits.join("*"));
 
 
 // const fruits = ["Banana", "Orange", "Apple", "Mango"];
@@ -37,7 +34,7 @@
 
 
 // const fruits = ["Banana", "Orange", "Apple", "Mango"];
-// let length = fruits.push("Kiwi");
+// fruits.push("Kiwi");
 // console.log(fruits);
 
 
@@ -80,5 +77,35 @@
 // const val = ' ';
 // const v = typeof(val);
 // console.log(v);
+
+
+// const fruits = ["Banana", "Orange", "Apple", "Mangol"];
+// fruits.shift();
+// console.log(fruits);
+
+
+// const fruits = ["Banana","Orange", "Apple", "Mango"];
+// console.log(delete fruits[0]);
+
+
+// const first = ["Hello"];
+// const second = ["Mahima"];
+// const both = first.concat(second);
+// console.log(both);
+
+
+// const fruits = ["Bnana", "Orange", "Apple", "Mango"];
+// fruits.copyWithin(3, 1);
+// console.log(fruits);
+
+
+// const array = [[1,2], [3,4], [5,6]];
+// const newarray = array.flat();
+// console.log(newarray);
+
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// fruits.splice(1, 0, "gwhh","jj");
+// console.log(fruits);
 
 
