@@ -105,7 +105,15 @@
 
 
 // const fruits = ["Banana", "Orange", "Apple", "Mango"];
-// fruits.splice(1, 0, "gwhh","jj");
+// fruits.splice(0, 2, "gwhh","jj");
 // console.log(fruits);
 
 
+// const months = ["Jan", "Feb", "Mar", "Apr"];
+// const spliced = months.toSpliced(0,3);
+// console.log(spliced);
+
+
+// const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+// const citrus = fruits.slice(1);
+// console.log(citrus);
