@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -81,4 +81,50 @@
     tableTag.addEventListener("click", Remove);
   </script>
 </body>
+</html> -->
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="para">thim my paragraph</p>
+  <button onclick="changetex()">button</button>
+
+  <script>
+    function changetex(){
+      document.getElementById('para').innerText = 'new paragraph';
+    }
+  </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggle</title>
+</head>
+<body>
+  <p id="para">this is my paragraph</p>
+  <button onclick="toggleText()">Toggle Text</button>
+
+  <script>
+    function toggleText() {
+      const para = document.getElementById('para');
+      if (para.innerText === 'this is my paragraph') {
+        para.innerText = 'new paragraph';
+      } else {
+        para.innerText = 'this is my paragraph';
+      }
+    }
+  </script>
+</body>
 </html>
+

@@ -1,0 +1,84 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #main{
+            border: 1px solid black;
+            width: 10rem;
+            height: 10rem;
+            margin: 5px;
+
+        }
+        #btn{
+            border: 1px solid black;
+            padding: 0.5rem 2rem;
+        } 
+    </style>
+
+</head>
+<body>
+    <div id="main"></div>
+    <div id="btn">chenge color</div>
+
+
+    <script>
+        let button = document.getElementById('btn');
+            button.addEventListener('click',()=>{
+            let main =  document.getElementById('main');
+            let randomcolor = getRandomColor();
+            main.style.backgroundColor = randomcolor;
+        });
+
+        function getRandomColor (){
+            let colors = '0123456789ABCDEF';
+            let color = '#';
+            for(let i=0; i<colors.length; i++){
+                color = color + colors[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    div ~ p {
+    color: blue;
+    font-weight: bold;
+}
+</style>
+
+<body>
+    <div class="example">This is a div.</div>
+    <p>This is a paragraph that will be selected.</p>
+    <p>This is another paragraph that will also be selected.</p>
+    <div class="another">This is another div.</div>
+    <p>This paragraph will NOT be selected because it is before the second div.</p>
+    <h1>hello</h1>
+    <p>hi</p>
+</body>
+
+</html>
