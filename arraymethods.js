@@ -379,3 +379,102 @@
 //     return -1;
 // }
 // console.log(array([1,2,3,4,9,6,9],2));
+
+
+// let num = 123;
+// while(num>0){
+//     console.log(num%10);
+//     num = parseInt(num/10);
+// }
+
+
+// let number = 567865;
+// let last = number%10;
+// while(number >= 10){
+//     let first = Math.floor(number/10);
+// }
+// console.log(last+first);
+
+
+// let number = 567861;
+// let last = number % 10;
+// while (number >= 10) {
+//     number = Math.floor(number / 10);  
+// }
+// console.log(last + number); 
+
+
+// let num = 4;
+// let num1 = 5;
+// let num2 = num;
+// num = num1;
+// num1 = num2;
+// console.log(num);
+// console.log(num1);
+
+
+
+// function reverseString(str){
+//     return str.split("").reverse().join("");
+// }
+
+// const string = "Hello,World!";
+// const reversed = reverseString(string);
+// console.log(reversed);
+
+
+// let string = "hello";
+// console.log(string.split("").reverse().join(""));
+
+
+// let num = 6;
+// let num1 = 4;
+// num = num+num1;
+// num1 = num-num1;
+// num = num-num1;
+// console.log(num);
+// console.log(num1);
+
+
+// let str = "mahima";
+// let Hello = str.toUpperCase();
+// console.log(Hello);
+
+
+// function capitalizeFirstLetter(str) {
+//     if (!str) return str;  
+//     return str.charAt(0).toUpperCase() + str.slice(1);
+// }
+
+// console.log(capitalizeFirstLetter("hello"));  
+// console.log(capitalizeFirstLetter("javaScript"));
+
+
+// let str = "mahima";
+// let hello = str.toUpperCase();
+// console.log(hello);
+
+
+// function str(string){
+//     let check = string.split("").reverse().join("");
+//     if(string===check){
+//         return "yes";
+//     }else{
+//         return "no";
+//     }
+// }
+// console.log(str("rar"));
+
+
+function countVowels(inputString){
+    const vowels = "aeiouAEIOU";
+    let count = 0;
+
+    for(let char of inputString){
+        if(vowels.includes(char)){
+            count++;
+        }
+    }
+    return count;
+}
+console.log(countVowels("mahimau"));
