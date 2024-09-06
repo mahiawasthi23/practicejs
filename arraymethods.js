@@ -466,15 +466,73 @@
 // console.log(str("rar"));
 
 
-function countVowels(inputString){
-    const vowels = "aeiouAEIOU";
-    let count = 0;
+// function countVowels(inputString){
+//     const vowels = "aeiouAEIOU";
+//     let count = 0;
 
-    for(let char of inputString){
-        if(vowels.includes(char)){
-            count++;
-        }
+//     for(let char of inputString){
+//         if(vowels.includes(char)){
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+// console.log(countVowels("mahimau"));
+
+
+// function countone(one){
+//     let ones = '1';
+//     let count = 0;
+
+//     for(let num of one){
+//         if(ones.includes(num)){
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+// let array = [1,0,6,0,7,1,8,0,1,0,9];
+// console.log(countone(array));
+
+
+// let arr = [1,3,10,8,5,9];
+// let largest = Math.max(...arr);
+// console.log(largest);
+
+
+// function largest(arr){
+//     let large = arr[0];
+
+//     for(let i=1; i<arr.length; i++){
+//         if(arr[i]>large){
+//             large = arr[i];
+//         }
+//     }
+//     return large;
+// }
+// const num = [12,45,87,98,34];
+// console.log(largest(num));
+
+
+// function generatenum(){
+//     return Math.floor(Math.random()*100)+1;   
+// }
+// console.log(generatenum());
+
+
+function str(N,K,A){
+    for(let i=0; i<K; i++){
+        let min = A.shift();
+        let max = A.pop();
+
+        A.push(min+max);
     }
-    return count;
+    return A;
 }
-console.log(countVowels("mahimau"));
+
+const N=4;
+const K=2;
+const A=[1,2,3,4];
+
+const finalArray = str(N,K,A);
+console.log(finalArray);
