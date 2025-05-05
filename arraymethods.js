@@ -2,12 +2,13 @@
 // console.log(array.length);
 
 // const fruits = ["Apple", "Orange", "Apple", "Mango"];
-// let position = fruits.indexOf("Apple")+1;
+// let position = fruits.indexOf("Orange")+1;
 // console.log(position);
 
 
 // let arr = [1,2,3];
 // console.log(arr.unshift(5));
+// console.log(arr);
 
 // let arr = [2,3,4];
 // arr.unshift(1);
@@ -24,6 +25,11 @@
 // console.log(fruits.at(2));
 
 
+// let arr1 = [1,2,3,4,5];
+// let arr2 = [6,7,8,9,10];
+// let arr3 = arr1.concat(...arr2);
+// console.log(arr3);
+
 // const fruits = ["Banana", "Orange", "Apple", "Mango"]
 // console.log(fruits.join("*"));
 
@@ -34,9 +40,8 @@
 
 
 // const fruits = ["Banana", "Orange", "Apple", "Mango"];
-// fruits.push("Kiwi");
+// fruits.push("Kiwi","fjgk");
 // console.log(fruits);
-
 
 
 // function greet() {
@@ -95,14 +100,13 @@
 
 
 // const fruits = ["Bnana", "Orange", "Apple", "Mango"];
-// fruits.copyWithin(3, 1);
+// fruits.copyWithin(3, 0);
 // console.log(fruits);
 
 
 // const array = [[1,2], [3,4], [5,6]];
 // const newarray = array.flat();
 // console.log(newarray);
-
 
 // const fruits = ["Banana", "Orange", "Apple", "Mango"];
 // fruits.splice(0, 2, "gwhh","jj");
@@ -161,10 +165,6 @@
 
 // const fruits = ["Banana","Orange", "Apple","Mango"];
 // fruits.sort();
-// console.log(fruits);
-
-// const fruits = ["Banana","Orange", "Apple","Mango"];
-// fruits.reverse();
 // console.log(fruits);
 
 // const months = ["5","3","1","2"];
@@ -520,19 +520,518 @@
 // console.log(generatenum());
 
 
-function str(N,K,A){
-    for(let i=0; i<K; i++){
-        let min = A.shift();
-        let max = A.pop();
+// function str(N,K,A){
+//     for(let i=0; i<K; i++){
+//         let min = A.shift();
+//         let max = A.pop();
 
-        A.push(min+max);
+//         A.push(min+max);
+//     }
+//     return A;
+// }
+
+// const N=4;
+// const K=2;
+// const A=[1,2,3,4];
+
+// const finalArray = str(N,K,A);
+// console.log(finalArray);
+
+
+// const arr = [1,2,2,4,2,6,5,1,5];
+// console.log(arr.reverse());
+
+
+// function sortArray(arr) {
+//     return arr.sort((a, b) => a - b);
+// }
+
+// let numbers = [5, 3, 8, 1, 2];
+// let sortedNumbers = sortArray(numbers);
+// console.log(sortedNumbers);
+
+
+// function sortarr(num){
+//     return num.sort((a,b) => a-b);
+// }
+// let arr = [5,2,4,3,1];
+// let sorti = sortarr(arr);
+// console.log(sorti);
+
+
+// let txt = "I can eat bananas all day";
+// let x = txt.slice(10,17);
+// console.log(x);
+
+
+
+
+{/* <script>
+document.getElementById("demo").innerHTML
+ = "Hello";
+</script> */}
+
+
+
+// var a = 10; 
+// (function () { 
+//     console.log(a); var a = 9; 
+// })
+// ();
+
+
+// let arr = [1, 2, 3, 4, 5]; 
+// let result = arr.find(x => x > 3); 
+// console.log(result);
+
+// let person =  "Hege";
+//   console.log(person);
+
+
+// function greet(name, cb) { 
+//     return `Hello, ${cb(name)}`; 
+// } function upper(name) { 
+//     return name.toUpperCase(); 
+// } 
+// console.log(greet("Mahi", upper));
+
+
+// let x=5;
+// let y=5;
+// let z=6;
+// console.log(x==y);
+// console.log(x==z);
+
+
+// let x=Math.sqrt(9);
+// console.log(x);
+
+
+// const name = "W3Schools";
+// let letter = name.at(-2);
+// console.log(letter);
+
+
+// let text = "We are the\v so-called \"Vikings\" from\'s the north.\\";
+// console.log(text);
+
+
+// let sab = "Hello";
+// let bas ="world";
+// let asb = "god"
+// console.log(sab.concat("  ",bas," ",asb));
+
+
+// let numb = 5;
+// let text = numb.toString();
+// let padded = text.padStart(4,"0");
+// console.log(padded);
+
+// let str = "Mala Mahima Awasthi Hello good Mahima night";
+// let index = str.indexOf("Mahima",15);
+// console.log(index);
+
+
+// let x = NaN;
+// console.log(typeof x);
+
+// let x = null;
+// console.log(typeof x)
+
+// let x = ['123'];
+// console.log(typeof x);
+
+// function hello(arr){
+//    return [...new Set(arr)].sort((a,b)=>a-b);
+// }
+// console.log(hello([3,3,7,6,9,5,7,8,5,6,9,5,8,5,65,4,9,3]));
+
+
+// console.log(1%1);
+
+// function createCounter() {
+//     let count = 0;
+//     return function () {
+//         count++;
+//         return count;
+//     };
+// }
+// const counter = createCounter();
+// console.log(counter());
+// console.log(counter());
+
+
+
+// function arr (arr){
+//     return Math.max(...arr);
+// }
+// console.log(arr([1,2,8,9,4,10,3,6,4]));
+
+
+// const example = ({a,b,c})=>{
+//     console.log(a,b,c);
+// };
+// example({a:1,b:2,c:3});
+
+// console.log(0 == false);
+
+// let b=10;
+// b=5;
+// console.log(b);
+
+// {
+//     var b=10;
+    
+// }
+// console.log(b);
+
+
+// function getrandomNumber(min,max){
+//     return Math.floor(Math.random()*(max-min+1))+min;
+// }
+
+// console.log(getrandomNumber(1,10));
+// console.log(getrandomNumber(1,10));
+
+// console.log(b);
+// var b = 5;
+
+// function number_of_digits(a){
+//     var count = a.lenght;
+//     return count;
+// }
+// number_of_digits(1000);
+
+// let a = ' mahima ';
+// console.log(a.trimStart());
+
+
+// let m = [1,2,3,4];
+// let b = m.splice(0,2);
+// console.log(b);
+
+// let a = [1,2,3,4];
+// let c = a.slice(0,2);
+// console.log(c);
+
+
+// let a = [1,2,3,4];
+// let c = a.slice(0,2);
+// console.log(a);
+
+// let b = [1,2,3,4];
+// let d = b.splice(0,2);
+// console.log(b);
+
+
+
+// let a = 10;
+// for(let i=1; i<=a; i++){
+//      if(a%i==0){
+//         let count = 0;
+//         for(let j=1; j<=i; j++){
+//             count++
+//         }
+//         if(count<=2){
+//             console.log(i);
+//         }
+//      }
+// }
+
+
+// var age = 16; 
+// if (age >= 18) { 
+//     console.log("You are eligible to vote"); 
+// } else { 
+//     console.log("You are not eligible to vote"); 
+// }
+
+// const obj = { a: 1, b: 2 };
+// const a = {...obj};
+// console.log(a);
+
+
+
+// function removeDuplicates(arr) {
+//     return [...new Set(arr)];
+// }
+
+// const number = [1,1,2,3,2,3,4,3,5,6,5,5];
+// console.log(removeDuplicates(number));
+
+
+// let a = null;
+// console.log(a);
+// console.log(typeof(a));
+
+
+// function greet(name) {
+//     console.log(`Hello, ${name}. My name is ${this.name}.`);
+// }
+// const person = { name: "Mahima" };
+// greet.call(person, "Alice"); 
+// // Output: Hello, Alice. My name is Mahima.
+
+
+
+// Regular function
+// function greet() { 
+//     return "Hello!"; 
+// }
+// console.log(greet());
+
+// Arrow function
+// const greetArrow = () => "Hello!";
+// console.log(greetArrow());
+
+
+
+// const s = ["Hello","How", "are","You"];
+// s.reverse();
+// console.log(s);
+
+
+// const s = [Hello,How,are, you];
+// s.reverse();
+// console.log(s);
+
+
+// function foo() {
+//     return{
+//       message: "Hello World",
+//     };
+//   }
+//   console.log(foo());
+
+
+// function hello(a, b) {
+//     return {
+//          a,
+//          b
+//     };
+// }
+
+// Example usage:
+// const d = hello("a.b.c", "gjipok");
+// console.log(d);
+
+
+
+// function counter(){
+//     let count = 0;
+//     function ineear(){
+//         count++;
+//         if(count === 4){
+//             console.log(count);
+//         }
+//     }
+//     return ineear;
+// }
+// let newCount = counter();
+// newCount();
+// newCount();
+// newCount();
+
+
+// var object = {
+// };
+// console.log(object);
+
+// var object = new Object();
+// console.log(object);
+
+
+// function Person(name, age) {
+//     this.name = name;
+//     this.age = age;
+// }
+
+// let p1 = new Person("Mahima", 25);
+// let p2 = new Person("Amit", 30);
+
+// console.log(p1.name);
+
+
+
+
+// let arr = [1,2,3,4,5];
+// let arr1 = arr.map(num => num*2)
+// console.log(arr1);
+
+
+// let even = [1,2,3,4,5];
+// let even1 = even.filter(num => num%2 === 0);
+// console.log(even1);
+
+
+// let arr = [1,2,3,4,5];
+// let sum = arr.reduce((a,b)=> a+b, 10);
+// console.log(sum);
+
+
+
+
+// function hello(a){
+//     return function mahima(b){
+//         return a + b;
+//     }
+// }
+// let d = hello(5)(4);  
+// console.log(d);
+
+
+
+
+// let arr = [1,5,3,2,4];
+// let max = 0;
+// let smax = 0;
+// for (let i=0; i<arr.length; i++){
+//     if(arr[i]>max){
+//         let t = max;
+//         max = arr[i];
+//         smax = t;
+//     }else if(arr[i]>smax){
+//         let t = smax;
+//         smax = arr[i];
+//     }
+// }
+// console.log(smax);
+
+
+// let a=0,b=1,sum,i=1;
+// while(i<10){
+//     console.log(a);
+//     sum = a+b;
+//     a=b;
+//     b=sum;
+//     i++;
+// }
+
+
+// let arr = [1, 2, 0, 4, 0, 6, 0, 3, 5, 0];
+// let arr1 = []; 
+// let arr2 = [];
+
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === 0) {
+//         arr1.push(arr[i]);
+//     } else {
+//         arr2.push(arr[i]);
+//     }
+// }
+
+// let b = arr2.concat(arr1);
+// console.log(b);
+
+
+// var x = 5;
+// var x = 10
+// console.log(x);
+
+
+// let x = 5;
+//  x = 10
+// console.log(x);
+
+
+// let mahima;
+
+// function hello(a){
+//   mahima = setInterval(()=>{
+//         console.log(a);
+//     },5000);
+// }
+// function clear(){
+//     clearInterval(mahima)
+// }
+
+// hello(5);
+
+// setTimeout(clear, 15000);
+
+
+
+// let numbers = [1, 2, 3, 4,2,5,7,9];
+// let dubal = numbers.reduce((acc, num) => num + acc, 10);
+// console.log(dubal);
+
+
+// let numbers = [1, 2, 3, 4,2, 5,7,9];
+// let dublicate = [...new Set(numbers)];
+// console.log(dublicate);
+
+
+// let str = "madam";
+// if(str === str.split('').reverse().join('')){
+//     console.log(true)
+// }else{
+//     console.log(false);
+// }
+
+
+
+// let str = "mahima";
+// let reversestr = str.split('').reverse().join('');
+// console.log(reversestr);
+
+
+// function hello(num){
+//     if(num === 0) return 1;
+//     return num * hello(num - 1);
+// }
+
+// console.log(hello(5));
+
+
+// function mahima(num){
+//     let a = 0, b = 1;
+//     for(let i=0; i<num; i++){
+//         console.log(a);
+//         [a,b] = [b, a+b];
+//     }
+// }
+// mahima(5);
+
+
+// function finMax(arr){
+//     return Math.max(...arr);
+// }
+
+// console.log(finMax([2,6,8,9,35,87,0]));
+
+
+// const user = {
+//     name: "Mahima",
+//     age: 25,
+//     name: "garima",
+//     age:26,
+//   };
+  
+ 
+//   const { name, age } = user;
+  
+//   console.log(name); 
+//   console.log(age);
+  
+
+
+//  const a = 5;
+//  const b = a;
+// console.log(a);
+// console.log(typeof a);
+// console.log(b);
+
+
+let m = [1,2,5,6];
+let n = [3,4,7,9];
+let a = m.concat(n);
+for(let i=0; i<=a.length/2; i++){
+    for(let j=a.length/2; j<a.length; j++){
+        if(a[j]<a[i]){
+            let b = a[i];
+            a[i] = a[j];
+            a[j] = b;
+        }break;
     }
-    return A;
 }
-
-const N=4;
-const K=2;
-const A=[1,2,3,4];
-
-const finalArray = str(N,K,A);
-console.log(finalArray);
+console.log(a);

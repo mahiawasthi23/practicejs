@@ -1,0 +1,79 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Explorer</title>
+    <link rel="stylesheet" href="counter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Country Explorer</h1>
+        <input type="text" id="search" placeholder="Search for a country...">
+        <div id="suggestions"></div>
+        <div class="filters">
+            <label for="language-filter">Language:</label>
+            <select id="language-filter">
+                <option value="">All</option>
+            </select>
+            <label for="region-filter">Region:</label>
+            <select id="region-filter">
+                <option value="">All</option>
+                <option value="Africa">Africa</option>
+                <option value="Americas">Americas</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="Oceania">Oceania</option>
+            </select>
+        </div>
+    </header>
+    <main>
+        <div id="country-list" class="country-list"></div>
+        <div id="favorites" class="favorites">
+            <h2>Add  Favorites</h2>
+            <div id="favorite-list"></div>
+        </div>
+    </main>
+    <footer>
+        <button id="load-more">Show More</button>
+    </footer>
+    <div id="country-details" class="details-popup"></div>
+    <script src="counter.js"></script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="counter">
+        <div id="movies"></div>
+    </div>
+    <script>
+        fetch("https://movie-project-ko1b.onrender.com/movies")
+        .then((res) => res.json())
+        .then((data) => {
+            let output = "";
+            data.getMovies.forEach(element => {
+                output += `
+                <div>
+                    <img src="${element.poster}"/>
+                    <h1>${element.title}</h1>
+                </div>`;
+            });
+
+            document.getElementById("movies").innerHTML = output;
+        })
+        .catch((error) =>{
+            console.error(error)
+            document.getElementById("movies").innerHTML = "<p>Error loading movies.</p>";
+        })
+    </script>
+</body>
+</html>

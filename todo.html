@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .todo-container {
+      max-width: 500px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      margin-top: 10px;
+      border-radius: 4px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      padding: 10px;
+      background-color: #f9f9f9;
+      margin-bottom: 8px;
+      border-radius: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .completed {
+      text-decoration: line-through;
+      color: grey;
+    }
+    .delete-btn {
+      background-color: red;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .delete-btn:hover {
+      background-color: darkred;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="todo-container">
+    <h1>To-Do List</h1>
+    <input type="text" id="taskInput" placeholder="Enter your task">
+    <button id="addBtn">Add Task</button>
+    <ul id="taskList">
+      <!-- Tasks will be dynamically added here -->
+    </ul>
+  </div>
+
+  <script>
+    const taskInput = document.getElementById('taskInput');
+    const addBtn = document.getElementById('addBtn');
+    const taskList = document.getElementById('taskList');
+
+    // Add task to the list
+    addBtn.addEventListener('click', function() {
+      const taskText = taskInput.value.trim();
+      
+      if (taskText !== "") {
+        const li = document.createElement('li');
+        li.innerHTML = `
+          <span class="task-text">${taskText}</span>
+          <button class="mark-completed-btn">Mark as Completed</button>
+          <button class="delete-btn">Delete</button>
+        `;
+
+        // Mark task as completed
+        const markCompletedBtn = li.querySelector('.mark-completed-btn');
+        markCompletedBtn.addEventListener('click', function() {
+          const taskTextSpan = li.querySelector('.task-text');
+          taskTextSpan.classList.toggle('completed');
+        });
+
+        // Delete task
+        const deleteBtn = li.querySelector('.delete-btn');
+        deleteBtn.addEventListener('click', function() {
+          li.remove();
+        });
+
+        // Append task to list
+        taskList.appendChild(li);
+
+        // Clear input field after adding task
+        taskInput.value = '';
+      } else {
+        alert('Please enter a task.');
+      }
+    });
+
+    // Allow adding task by pressing Enter key
+    taskInput.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter') {
+        addBtn.click();
+      }
+    });
+  </script>
+
+</body>
+</html>
